@@ -1,0 +1,16 @@
+{
+    "senin": [
+        {
+            "nama": "Jettaa",
+            "kode": "MKW11",
+            "kelas": "2023",
+            "jam_kelas": "11.00-13.00"
+        },
+        {
+            "nama": "Rudi",
+            "kode": "MK10",
+            "kelas": "2023",
+            "jam_kelas": "13.30-15.00"
+        }
+    ]
+}
