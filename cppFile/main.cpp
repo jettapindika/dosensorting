@@ -9,13 +9,13 @@ int main()
     switch (choice)
     {
     case 1:
-        send1Minggu("../cppFile/datadosen.json");
+        send1MingguChecklist("../cppFile/datadosen.json");
         break;
     case 2:
         send1Hari("../cppFile/datadosen.json");
         break;
     case 3:
-        send1Hari("../cppFile/datadosen.json");
+        inputAbsen();
         break;
     case 0:
         cout << "Exiting...\n";

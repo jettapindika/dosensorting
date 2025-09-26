@@ -1,13 +1,14 @@
-2025/09/25-13:55:48.364 164b0 Reusing MANIFEST /workspaces/dosensorting/whatsapp-bot/.wwebjs_auth/session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2025/09/25-13:55:48.364 164b0 Recovering log #74
-2025/09/25-13:55:48.371 164b0 Reusing old log /workspaces/dosensorting/whatsapp-bot/.wwebjs_auth/session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000074.log 
-2025/09/25-13:55:49.977 164b0 Level-0 table #79: started
-2025/09/25-13:55:49.985 164b0 Level-0 table #79: 118372 bytes OK
-2025/09/25-13:55:49.986 164b0 Delete type=0 #74
-2025/09/25-13:55:49.986 164b0 Manual compaction at level-0 from '\x00"\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00#\x00\x00\x00' @ 0 : 0; will stop at (end)
-2025/09/25-13:55:51.890 164f3 Compacting 1@1 + 1@2 files
-2025/09/25-13:55:51.958 164f3 Generated table #80@1: 32890 keys, 1248777 bytes
-2025/09/25-13:55:51.958 164f3 Compacted 1@1 + 1@2 files => 1248777 bytes
-2025/09/25-13:55:51.959 164f3 compacted to: files[ 0 0 1 0 0 0 0 ]
-2025/09/25-13:55:51.959 164f3 Delete type=2 #79
-2025/09/25-13:55:51.959 164f3 Delete type=2 #76
+2025/09/26-10:09:30.061 bf77 Reusing MANIFEST /workspaces/dosensorting/whatsapp-bot/.wwebjs_auth/session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/09/26-10:09:30.061 bf77 Recovering log #146
+2025/09/26-10:09:30.101 bf77 Reusing old log /workspaces/dosensorting/whatsapp-bot/.wwebjs_auth/session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000146.log 
+2025/09/26-10:09:31.592 bf77 Level-0 table #151: started
+2025/09/26-10:09:31.613 bf77 Level-0 table #151: 637636 bytes OK
+2025/09/26-10:09:31.615 bf77 Delete type=0 #146
+2025/09/26-10:09:31.615 bf77 Manual compaction at level-0 from '\x004\x00\x00\x00' @ 72057594037927935 : 1 .. '\x005\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/09/26-10:09:33.482 bf77 Compacting 1@1 + 1@2 files
+2025/09/26-10:09:33.584 bf77 Generated table #152@1: 56879 keys, 2214022 bytes
+2025/09/26-10:09:33.591 bf77 Generated table #153@1: 376 keys, 6321 bytes
+2025/09/26-10:09:33.591 bf77 Compacted 1@1 + 1@2 files => 2220343 bytes
+2025/09/26-10:09:33.593 bf77 compacted to: files[ 0 0 2 0 0 0 0 ]
+2025/09/26-10:09:33.593 bf77 Delete type=2 #151
+2025/09/26-10:09:33.593 bf77 Delete type=2 #148

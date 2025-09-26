@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-export function addDosen(hari, nama, kode, kelas, jam_kelas) {
+export function addDosen(hari, nama, kode, kelas, jam_kelas, matkul) {
     let dosenData = {};
     try {
         if (fs.existsSync('../cppFile/datadosen.json')) {
@@ -23,9 +23,9 @@ export function addDosen(hari, nama, kode, kelas, jam_kelas) {
     if (exists) {
         return { status: 'duplicate', message: 'Nama atau kode sudah ada di hari tersebut. Masukkan data lain.' };
     }
-    dosenData[hari].push({ nama: nama.toLowerCase(), kode, kelas, jam_kelas });
+    dosenData[hari].push({ nama, kode, kelas, jam_kelas, matkul });
     fs.writeFileSync('../cppFile/datadosen.json', JSON.stringify(dosenData, null, 4));
-    return { status: 'ok', message: `Dosen ditambahkan di hari ${hari}: ${nama} (${kode}, ${kelas}, Jam: ${jam_kelas})` };
+    return { status: 'ok', message: `Dosen ditambahkan di hari ${hari}: ${nama} (${kode}, ${kelas}, Jam: ${jam_kelas}, Matkul: ${matkul})` };
 }
 
 export function showDosen(hari) {
@@ -33,9 +33,10 @@ export function showDosen(hari) {
         if (fs.existsSync('../cppFile/datadosen.json')) {
             const data = fs.readFileSync('../cppFile/datadosen.json', 'utf8');
             const dosenData = JSON.parse(data);
-            if (dosenData[hari] && dosenData[hari].length > 0) {
-                return dosenData[hari]
-                    .map((d, i) => `${i+1}. ${d.nama} (${d.kode}, ${d.kelas}, Jam: ${d.jam_kelas})`)
+            const hariKey = Object.keys(dosenData).find(h => h.toLowerCase() === hari.toLowerCase());
+            if (hariKey && dosenData[hariKey].length > 0) {
+                return dosenData[hariKey]
+                    .map((d, i) => `${i+1}. ${d.nama} (${d.kode}, ${d.kelas}, Jam: ${d.jam_kelas}, Matkul: ${d.matkul || '-'})`)
                     .join('\n');
             } else {
                 return 'Tidak ada dosen di hari tersebut.';
@@ -53,10 +54,11 @@ export function removeDosen(hari, namaOrKode) {
         if (fs.existsSync('../cppFile/datadosen.json')) {
             const data = fs.readFileSync('../cppFile/datadosen.json', 'utf8');
             const dosenData = JSON.parse(data);
-            if (!dosenData[hari]) return 'Hari tidak ditemukan.';
-            const before = dosenData[hari].length;
-            dosenData[hari] = dosenData[hari].filter(d => d.nama !== namaOrKode && d.kode !== namaOrKode);
-            if (dosenData[hari].length === before) return 'Dosen tidak ditemukan.';
+            const hariKey = Object.keys(dosenData).find(h => h.toLowerCase() === hari.toLowerCase());
+            if (!hariKey) return 'Hari tidak ditemukan.';
+            const before = dosenData[hariKey].length;
+            dosenData[hariKey] = dosenData[hariKey].filter(d => d.nama !== namaOrKode && d.kode !== namaOrKode);
+            if (dosenData[hariKey].length === before) return 'Dosen tidak ditemukan.';
             fs.writeFileSync('../cppFile/datadosen.json', JSON.stringify(dosenData, null, 4));
             return 'Dosen berhasil dihapus.';
         } else {
