@@ -9,10 +9,10 @@ int main()
     switch (choice)
     {
     case 1:
-        send1MingguChecklist("../cppFile/datadosen.json");
+        send1MingguChecklist("./datadosen.json");
         break;
     case 2:
-        send1Hari("../cppFile/datadosen.json");
+        send1Hari("./datadosen.json");
         break;
     case 3:
         inputAbsen();
