@@ -1,12 +1,10 @@
-#include <fstream>
-#include <nlohmann/json.hpp>
-#include <algorithm>
 #include <iostream>
-#include <fstream>
 #include <string>
 #include <vector>
-#include <nlohmann/json.hpp>
+#include <algorithm>
+#include <fstream>
 #include <sstream>
+#include <nlohmann/json.hpp>
 
 using namespace std;
 using json = nlohmann::json;
