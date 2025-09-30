@@ -26,10 +26,8 @@ int displayMenu()
         cout << "=========================\n\n";
         cout << "Jadwal:\n";
         cout << "1. Lihat Jadwal Seminggu\n";
-        cout << "2. Lihat Jadwal 1 Hari\n\n";
-        cout << "Perkuliahan:\n";
-        cout << "3. Absen\n";
-        cout << "4. Notifikasi Dosen\n\n";
+        cout << "2. Lihat Jadwal 1 Hari\n";
+        cout << "3. Absen\n\n";
         cout << "Others:\n";
         cout << "0. Exit\n";
         cout << "Choose an option: ";
